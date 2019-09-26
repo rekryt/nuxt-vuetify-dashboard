@@ -18,12 +18,17 @@ void (function updateModules() {
   // Enforce store modules
   store.modules = store.modules || {}
 
+  resolveStoreModules(require('..\\store\\app\\mutations.js'), 'app/mutations.js')
+  resolveStoreModules(require('..\\store\\app\\state.js'), 'app/state.js')
+
   // If the environment supports hot reloading...
 
   if (process.client && module.hot) {
     // Whenever any Vuex module is updated...
     module.hot.accept([
       '..\\store\\index.js',
+      '..\\store\\app\\mutations.js',
+      '..\\store\\app\\state.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

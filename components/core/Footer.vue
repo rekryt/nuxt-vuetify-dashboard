@@ -17,6 +17,13 @@
 			, made with
 			<v-icon color="tertiary" size="17">mdi-heart</v-icon>
 			for a better web
+			<br />
+			© 2019
+			<a href="https://vk.com/krupkin.sergey" target="_blank">
+				Rekryt
+				<v-icon color="tertiary" size="17">mdi-star</v-icon>
+			</a>
+			, nuxtjs+vutify+dashboard
 		</span>
 	</v-footer>
 </template>

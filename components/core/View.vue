@@ -2,7 +2,7 @@
 	<v-content class="grey lighten-3">
 		<div id="core-view">
 			<v-fade-transition mode="out-in">
-				<router-view />
+				<nuxt></nuxt>
 			</v-fade-transition>
 		</div>
 	</v-content>

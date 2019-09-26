@@ -1,6 +1,6 @@
 # nuxt-vuetify-dashboard
 
-> Nuxt.js + Vuetify.js project
+> Nuxt.js + Vuetify.js + Material Dashboard
 
 ## Build Setup
 
