@@ -52,6 +52,9 @@ module.exports = {
 					exclude: /(node_modules)/,
 				});
 			}
+			if (ctx.isClient) {
+				config.devtool = "eval-source-map";
+			}
 		},
 		transpile: [/^vuetify/],
 	},
