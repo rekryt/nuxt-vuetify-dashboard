@@ -25,7 +25,7 @@ module.exports = {
 			},
 		],
 	},
-	plugins: ["~/plugins/vuetify.js"],
+	plugins: ["~/plugins/vuetify.js", "~/plugins/base.js"],
 	css: [],
 	/*
 	 ** Customize the progress bar color
@@ -47,5 +47,9 @@ module.exports = {
 				});
 			}
 		},
+	},
+	modules: ["@nuxtjs/axios"],
+	axios: {
+		// proxyHeaders: false
 	},
 };
