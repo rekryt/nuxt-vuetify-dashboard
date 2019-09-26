@@ -1,15 +1,6 @@
 <template>
-	<v-app-bar
-		id="core-app-bar"
-		absolute
-		app
-		color="transparent"
-		flat
-		height="88"
-	>
-		<v-toolbar-title
-			class="tertiary--text font-weight-light align-self-center"
-		>
+	<v-app-bar id="core-app-bar" absolute app color="transparent" flat height="88">
+		<v-toolbar-title class="tertiary--text font-weight-light align-self-center">
 			<v-btn v-if="responsive" dark icon @click.stop="onClick">
 				<v-icon>mdi-view-list</v-icon>
 			</v-btn>
@@ -20,12 +11,7 @@
 
 		<v-toolbar-items>
 			<v-row align="center" class="mx-0">
-				<v-text-field
-					class="mr-4 purple-input"
-					color="purple"
-					label="Search..."
-					hide-details
-				/>
+				<v-text-field class="mr-4 purple-input" color="purple" label="Search..." hide-details />
 
 				<v-btn icon to="/">
 					<v-icon color="tertiary">
@@ -35,13 +21,7 @@
 
 				<v-menu bottom left offset-y transition="slide-y-transition">
 					<template v-slot:activator="{ attrs, on }">
-						<v-btn
-							class="toolbar-items"
-							icon
-							to="/notifications"
-							v-bind="attrs"
-							v-on="on"
-						>
+						<v-btn class="toolbar-items" icon to="/notifications" v-bind="attrs" v-on="on">
 							<v-badge color="error" overlap>
 								<template slot="badge">
 									{{ notifications.length }}
@@ -55,11 +35,7 @@
 
 					<v-card>
 						<v-list dense>
-							<v-list-item
-								v-for="notification in notifications"
-								:key="notification"
-								@click="onClick"
-							>
+							<v-list-item v-for="notification in notifications" :key="notification" @click="onClick">
 								<v-list-item-title v-text="notification" />
 							</v-list-item>
 						</v-list>
@@ -78,16 +54,16 @@
 
 <script>
 // Utilities
-import { mapMutations } from "vuex";
+import { mapMutations } from 'vuex';
 
 export default {
 	data: () => ({
 		notifications: [
-			"Mike, John responded to your email",
-			"You have 5 new tasks",
+			'Mike, John responded to your email',
+			'You have 5 new tasks',
 			"You're now a friend with Andrew",
-			"Another Notification",
-			"Another One",
+			'Another Notification',
+			'Another One',
 		],
 		title: null,
 		responsive: false,
@@ -101,14 +77,14 @@ export default {
 
 	mounted() {
 		this.onResponsiveInverted();
-		window.addEventListener("resize", this.onResponsiveInverted);
+		window.addEventListener('resize', this.onResponsiveInverted);
 	},
 	beforeDestroy() {
-		window.removeEventListener("resize", this.onResponsiveInverted);
+		window.removeEventListener('resize', this.onResponsiveInverted);
 	},
 
 	methods: {
-		...mapMutations("app", ["setDrawer", "toggleDrawer"]),
+		...mapMutations('app', ['setDrawer', 'toggleDrawer']),
 		onClick() {
 			this.setDrawer(!this.$store.state.app.drawer);
 		},

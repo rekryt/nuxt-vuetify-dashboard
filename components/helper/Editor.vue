@@ -6,13 +6,13 @@
 
 let ClassicEditor;
 if (process.client) {
-	ClassicEditor = require("@ckeditor/ckeditor5-build-classic");
+	ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 }
 
 export default {
 	props: {
 		value: {
-			default: "",
+			default: '',
 		},
 		config: {
 			// The configuration of the editor.
@@ -22,7 +22,7 @@ export default {
 		data: {
 			set(value) {
 				this.editorData = value;
-				this.$emit("input", value);
+				this.$emit('input', value);
 			},
 			get() {
 				return this.editorData;
@@ -32,7 +32,7 @@ export default {
 	data() {
 		return {
 			editor: ClassicEditor,
-			editorData: "",
+			editorData: '',
 		};
 	},
 	created() {

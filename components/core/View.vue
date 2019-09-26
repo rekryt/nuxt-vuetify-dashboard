@@ -10,11 +10,11 @@
 
 <script>
 export default {
-	name: "CoreView",
+	name: 'CoreView',
 
 	metaInfo() {
 		return {
-			title: "Vue Material Dashboard by CreativeTim",
+			title: 'Vue Material Dashboard by CreativeTim',
 		};
 	},
 };

@@ -9,25 +9,14 @@
 		offset-x
 		transition="slide-y-transition"
 	>
-		<v-btn
-			slot="activator"
-			class="elevation-0"
-			color="grey"
-			dark
-			fab
-			fixed
-			style="top: 96px;"
-			top
-		>
+		<v-btn slot="activator" class="elevation-0" color="grey" dark fab fixed style="top: 96px;" top>
 			<v-icon>mdi-settings</v-icon>
 		</v-btn>
 		<v-card>
 			<v-container grid-list-xl>
 				<v-row>
 					<v-col cols="12">
-						<div
-							class="text-center body-2 text-uppercase sidebar-filter"
-						>
+						<div class="text-center body-2 text-uppercase sidebar-filter">
 							Sidebar Filters
 						</div>
 
@@ -35,11 +24,7 @@
 							<v-avatar
 								v-for="c in colors"
 								:key="c"
-								:class="[
-									c === color
-										? 'color-active color-' + c
-										: 'color-' + c,
-								]"
+								:class="[c === color ? 'color-active color-' + c : 'color-' + c]"
 								size="23"
 								@click="setColor(c)"
 							/>
@@ -48,9 +33,7 @@
 					</v-col>
 
 					<v-col cols="12">
-						<div
-							class="text-center body-2 text-uppercase sidebar-filter"
-						>
+						<div class="text-center body-2 text-uppercase sidebar-filter">
 							Images
 						</div>
 					</v-col>
@@ -83,24 +66,10 @@
 							</div>
 
 							<div>
-								<v-btn
-									color="indigo"
-									class="mr-2 v-btn-facebook"
-									dark
-									fab
-									icon
-									small
-								>
+								<v-btn color="indigo" class="mr-2 v-btn-facebook" dark fab icon small>
 									<v-icon>mdi-facebook</v-icon>
 								</v-btn>
-								<v-btn
-									color="cyan"
-									class="v-btn-twitter"
-									dark
-									fab
-									icon
-									small
-								>
+								<v-btn color="cyan" class="v-btn-twitter" dark fab icon small>
 									<v-icon>mdi-twitter</v-icon>
 								</v-btn>
 							</div>
@@ -114,28 +83,28 @@
 
 <script>
 // Utilities
-import { mapMutations, mapState } from "vuex";
+import { mapMutations, mapState } from 'vuex';
 
 export default {
 	data: () => ({
-		colors: ["primary", "info", "success", "warning", "danger"],
+		colors: ['primary', 'info', 'success', 'warning', 'danger'],
 		images: [
-			"https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg",
-			"https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg",
-			"https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-3.3a54f533.jpg",
-			"https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-4.3b7e38ed.jpg",
+			'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-1.23832d31.jpg',
+			'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg',
+			'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-3.3a54f533.jpg',
+			'https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-4.3b7e38ed.jpg',
 		],
 	}),
 
 	computed: {
-		...mapState("app", ["image", "color"]),
+		...mapState('app', ['image', 'color']),
 		color() {
 			return this.$store.state.app.color;
 		},
 	},
 
 	methods: {
-		...mapMutations("app", ["setImage"]),
+		...mapMutations('app', ['setImage']),
 		setColor(color) {
 			this.$store.state.app.color = color;
 		},

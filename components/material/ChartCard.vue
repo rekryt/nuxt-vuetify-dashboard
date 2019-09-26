@@ -1,9 +1,5 @@
 <template>
-	<material-card
-		class="v-card--material-chart"
-		v-bind="$attrs"
-		v-on="$listeners"
-	>
+	<material-card class="v-card--material-chart" v-bind="$attrs" v-on="$listeners">
 		<template v-slot:header>
 			<chartist
 				:data="data"
@@ -24,7 +20,7 @@
 
 <script>
 export default {
-	name: "MaterialChartCard",
+	name: 'MaterialChartCard',
 
 	inheritAttrs: false,
 
@@ -52,7 +48,7 @@ export default {
 		type: {
 			type: String,
 			required: true,
-			validator: v => ["Bar", "Line", "Pie"].includes(v),
+			validator: v => ['Bar', 'Line', 'Pie'].includes(v),
 		},
 	},
 };

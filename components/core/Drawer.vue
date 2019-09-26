@@ -12,19 +12,12 @@
 		width="260"
 	>
 		<template v-slot:img="attrs">
-			<v-img
-				v-bind="attrs"
-				gradient="to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)"
-			/>
+			<v-img v-bind="attrs" gradient="to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)" />
 		</template>
 
 		<v-list-item two-line>
 			<v-list-item-avatar color="white">
-				<v-img
-					src="https://cdn.vuetifyjs.com/images/logos/v.png"
-					height="34"
-					contain
-				/>
+				<v-img src="https://cdn.vuetifyjs.com/images/logos/v.png" height="34" contain />
 			</v-list-item-avatar>
 
 			<v-list-item-title class="title">
@@ -38,12 +31,7 @@
 			<!-- Bug in Vuetify for first child of v-list not receiving proper border-radius -->
 			<div />
 
-			<v-list-item
-				v-for="(link, i) in links"
-				:key="i"
-				:to="link.to"
-				active-class="primary white--text"
-			>
+			<v-list-item v-for="(link, i) in links" :key="i" :to="link.to" active-class="primary white--text">
 				<v-list-item-action>
 					<v-icon>{{ link.icon }}</v-icon>
 				</v-list-item-action>
@@ -70,7 +58,7 @@
 
 <script>
 // Utilities
-import { mapMutations, mapState } from "vuex";
+import { mapMutations, mapState } from 'vuex';
 
 export default {
 	props: {
@@ -82,45 +70,45 @@ export default {
 	data: () => ({
 		links: [
 			{
-				to: "/",
-				icon: "mdi-view-dashboard",
-				text: "Dashboard",
+				to: '/',
+				icon: 'mdi-view-dashboard',
+				text: 'Dashboard',
 			},
 			{
-				to: "/user-profile",
-				icon: "mdi-account",
-				text: "User Profile",
+				to: '/user-profile',
+				icon: 'mdi-account',
+				text: 'User Profile',
 			},
 			{
-				to: "/table-list",
-				icon: "mdi-clipboard-outline",
-				text: "Table List",
+				to: '/table-list',
+				icon: 'mdi-clipboard-outline',
+				text: 'Table List',
 			},
 			{
-				to: "/typography",
-				icon: "mdi-format-font",
-				text: "Typography",
+				to: '/typography',
+				icon: 'mdi-format-font',
+				text: 'Typography',
 			},
 			{
-				to: "/icons",
-				icon: "mdi-chart-bubble",
-				text: "Icons",
+				to: '/icons',
+				icon: 'mdi-chart-bubble',
+				text: 'Icons',
 			},
 			{
-				to: "/maps",
-				icon: "mdi-map-marker",
-				text: "Maps",
+				to: '/maps',
+				icon: 'mdi-map-marker',
+				text: 'Maps',
 			},
 			{
-				to: "/notifications",
-				icon: "mdi-bell",
-				text: "Notifications",
+				to: '/notifications',
+				icon: 'mdi-bell',
+				text: 'Notifications',
 			},
 		],
 	}),
 
 	computed: {
-		...mapState("app", ["image", "color"]),
+		...mapState('app', ['image', 'color']),
 		inputValue: {
 			get() {
 				return this.$store.state.app.drawer;
@@ -132,7 +120,7 @@ export default {
 	},
 
 	methods: {
-		...mapMutations("app", ["setDrawer", "toggleDrawer"]),
+		...mapMutations('app', ['setDrawer', 'toggleDrawer']),
 	},
 };
 </script>

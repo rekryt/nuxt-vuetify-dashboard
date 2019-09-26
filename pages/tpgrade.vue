@@ -21,36 +21,28 @@
 						</thead>
 						<tbody class="text-center">
 							<tr>
-								<th
-									class="text-left font-weight-light subheading"
-								>
+								<th class="text-left font-weight-light subheading">
 									Components
 								</th>
 								<td>60</td>
 								<td>200</td>
 							</tr>
 							<tr>
-								<th
-									class="text-left font-weight-light subheading"
-								>
+								<th class="text-left font-weight-light subheading">
 									Plugins
 								</th>
 								<td>2</td>
 								<td>4</td>
 							</tr>
 							<tr>
-								<th
-									class="text-left font-weight-light subheading"
-								>
+								<th class="text-left font-weight-light subheading">
 									Example Pages
 								</th>
 								<td>3</td>
 								<td>8</td>
 							</tr>
 							<tr>
-								<th
-									class="text-left font-weight-light subheading"
-								>
+								<th class="text-left font-weight-light subheading">
 									Login, Register, Pricing, Lock Pages
 								</th>
 								<td>
@@ -65,9 +57,7 @@
 								</td>
 							</tr>
 							<tr>
-								<th
-									class="text-left font-weight-light subheading"
-								>
+								<th class="text-left font-weight-light subheading">
 									Premium Support
 								</th>
 								<td>

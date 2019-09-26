@@ -1,11 +1,6 @@
 <template>
 	<v-card :style="styles" v-bind="$attrs" v-on="$listeners">
-		<helper-offset
-			v-if="hasOffset"
-			:inline="inline"
-			:full-width="fullWidth"
-			:offset="offset"
-		>
+		<helper-offset v-if="hasOffset" :inline="inline" :full-width="fullWidth" :offset="offset">
 			<v-card
 				v-if="!$slots.offset"
 				:color="color"
@@ -38,14 +33,14 @@
 
 <script>
 export default {
-	name: "MaterialCard",
+	name: 'MaterialCard',
 
 	inheritAttrs: false,
 
 	props: {
 		color: {
 			type: String,
-			default: "secondary",
+			default: 'secondary',
 		},
 		elevation: {
 			type: [Number, String],
@@ -75,12 +70,7 @@ export default {
 
 	computed: {
 		hasOffset() {
-			return (
-				this.$slots.header ||
-				this.$slots.offset ||
-				this.title ||
-				this.text
-			);
+			return this.$slots.header || this.$slots.offset || this.title || this.text;
 		},
 		styles() {
 			if (!this.hasOffset) return null;

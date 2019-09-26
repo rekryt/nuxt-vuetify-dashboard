@@ -1,26 +1,13 @@
 <template>
-	<material-card
-		class="v-card--material-stats"
-		v-bind="$attrs"
-		v-on="$listeners"
-	>
-		<v-card
-			slot="offset"
-			:class="`elevation-${elevation}`"
-			:color="color"
-			class="pa-4"
-			dark
-		>
+	<material-card class="v-card--material-stats" v-bind="$attrs" v-on="$listeners">
+		<v-card slot="offset" :class="`elevation-${elevation}`" :color="color" class="pa-4" dark>
 			<v-icon size="40">
 				{{ icon }}
 			</v-icon>
 		</v-card>
 
 		<div class="text-right">
-			<p
-				class="body-2 grey--text font-weight-light mb-0"
-				v-text="title"
-			/>
+			<p class="body-2 grey--text font-weight-light mb-0" v-text="title" />
 			<h3 class="headline font-weight-light text--primary">
 				{{ value }}
 				<small>{{ smallValue }}</small>
@@ -34,20 +21,16 @@
 				{{ subIcon }}
 			</v-icon>
 
-			<span
-				:class="subTextColor"
-				class="caption font-weight-light"
-				v-text="subText"
-			/>
+			<span :class="subTextColor" class="caption font-weight-light" v-text="subText" />
 		</template>
 	</material-card>
 </template>
 
 <script>
-import Card from "./Card";
+import Card from './Card';
 
 export default {
-	name: "MaterialStatsCard",
+	name: 'MaterialStatsCard',
 
 	inheritAttrs: false,
 

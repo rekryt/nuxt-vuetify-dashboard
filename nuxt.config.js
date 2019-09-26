@@ -3,40 +3,39 @@ module.exports = {
 	 ** Headers of the page
 	 */
 	head: {
-		title: "nuxt-vuetify-dashboard",
+		title: 'nuxt-vuetify-dashboard',
 		meta: [
-			{ charset: "utf-8" },
+			{ charset: 'utf-8' },
 			{
-				name: "viewport",
-				content: "width=device-width, initial-scale=1",
+				name: 'viewport',
+				content: 'width=device-width, initial-scale=1',
 			},
 			{
-				hid: "description",
-				name: "description",
-				content: "Nuxt.js + Vuetify.js project",
+				hid: 'description',
+				name: 'description',
+				content: 'Nuxt.js + Vuetify.js + Material Dashboard',
 			},
 		],
 		link: [
-			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{
-				rel: "stylesheet",
-				href:
-					"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons",
+				rel: 'stylesheet',
+				href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
 			},
 		],
 	},
 	plugins: [
-		"~/plugins/vuetify.js",
-		"~/plugins/base.js",
-		"~/plugins/chartist.js",
-		"~/plugins/components.js",
-		{ src: "~/plugins/ckeditor.js", mode: "client" },
+		'~/plugins/vuetify.js',
+		'~/plugins/base.js',
+		'~/plugins/chartist.js',
+		'~/plugins/components.js',
+		{ src: '~/plugins/ckeditor.js', mode: 'client' },
 	],
-	css: [],
+	css: ['~/assets/less/main.less'],
 	/*
 	 ** Customize the progress bar color
 	 */
-	loading: { color: "#3B8070" },
+	loading: { color: '#3B8070' },
 	/*
 	 ** Build configuration
 	 */
@@ -46,19 +45,19 @@ module.exports = {
 			// Run ESLint on save
 			if (ctx.isDev && ctx.isClient) {
 				config.module.rules.push({
-					enforce: "pre",
+					enforce: 'pre',
 					test: /\.(js|vue)$/,
-					loader: "eslint-loader",
+					loader: 'eslint-loader',
 					exclude: /(node_modules)/,
 				});
 			}
 			if (ctx.isClient) {
-				config.devtool = "eval-source-map";
+				config.devtool = 'source-map';
 			}
 		},
 		transpile: [/^vuetify/],
 	},
-	modules: ["@nuxtjs/axios"],
+	modules: ['@nuxtjs/axios'],
 	axios: {
 		// proxyHeaders: false
 	},

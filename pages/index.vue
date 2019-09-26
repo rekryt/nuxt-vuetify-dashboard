@@ -30,7 +30,6 @@
 					</template>
 				</material-chart-card>
 			</v-col>
-
 			<v-col cols="12" lg="4">
 				<material-chart-card
 					:data="emailsSubscriptionChart.data"
@@ -313,14 +312,23 @@
 					</v-tabs-items>
 				</material-card>
 			</v-col>
+			<v-col cols="12" class="editor">
+				<div class="editor-label">CKEditor</div>
+				<editor :value="editorText"></editor>
+			</v-col>
 		</v-row>
 	</v-container>
 </template>
 
 <script>
+import Editor from '../components/helper/Editor.vue';
+
 export default {
+	components: { Editor },
 	data() {
 		return {
+			editorText:
+				'<h2>Material Dashboard</h2><blockquote><p>made by Rekryt (vk.com/krupkin.sergey)<br>sep 2019</p></blockquote><p>&nbsp;</p><p>Special thanks to:<br>https://nuxtjs.org<br>https://vuetifyjs.com<br>https://www.creative-tim.com</p>',
 			dailySalesChart: {
 				data: {
 					labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],

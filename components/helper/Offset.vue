@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: "HelperOffset",
+	name: 'HelperOffset',
 
 	props: {
 		fullWidth: {
@@ -22,7 +22,7 @@ export default {
 	computed: {
 		classes() {
 			return {
-				"v-offset--full-width": this.fullWidth,
+				'v-offset--full-width': this.fullWidth,
 			};
 		},
 		styles() {
