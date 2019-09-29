@@ -2,9 +2,11 @@
 
 > Nuxt.js + Vuetify.js + Material Dashboard
 
+![alt text](http://rekryt.ru/files/nuxt-vuetify-dashboard.png)
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install # Or yarn install
 
