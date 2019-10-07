@@ -10,6 +10,9 @@
 # install dependencies
 $ npm install # Or yarn install
 
+# install babel 7 (optional)
+$ npm install --save-dev @babel/core @babel/preset-env
+
 # serve with hot reload at localhost:3000
 $ npm run dev
 
