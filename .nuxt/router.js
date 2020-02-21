@@ -12,6 +12,13 @@ const _d2740eba = () => interopDefault(import('..\\pages\\typography.vue' /* web
 const _3c7983ca = () => interopDefault(import('..\\pages\\user-profile.vue' /* webpackChunkName: "pages_user-profile" */))
 const _1abf4ee4 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
+// TODO: remove in Nuxt 3
+const emptyFn = () => {}
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location, onComplete = emptyFn, onAbort) {
+  return originalPush.call(this, location, onComplete, onAbort)
+}
+
 Vue.use(Router)
 
 export const routerOptions = {
@@ -22,42 +29,42 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-      path: "/icons",
-      component: _5e25c254,
-      name: "icons"
-    }, {
-      path: "/maps",
-      component: _077be9ea,
-      name: "maps"
-    }, {
-      path: "/notifications",
-      component: _e7b534b8,
-      name: "notifications"
-    }, {
-      path: "/table-list",
-      component: _47f393b1,
-      name: "table-list"
-    }, {
-      path: "/tpgrade",
-      component: _90132dd2,
-      name: "tpgrade"
-    }, {
-      path: "/typography",
-      component: _d2740eba,
-      name: "typography"
-    }, {
-      path: "/user-profile",
-      component: _3c7983ca,
-      name: "user-profile"
-    }, {
-      path: "/",
-      component: _1abf4ee4,
-      name: "index"
-    }],
+    path: "/icons",
+    component: _5e25c254,
+    name: "icons"
+  }, {
+    path: "/maps",
+    component: _077be9ea,
+    name: "maps"
+  }, {
+    path: "/notifications",
+    component: _e7b534b8,
+    name: "notifications"
+  }, {
+    path: "/table-list",
+    component: _47f393b1,
+    name: "table-list"
+  }, {
+    path: "/tpgrade",
+    component: _90132dd2,
+    name: "tpgrade"
+  }, {
+    path: "/typography",
+    component: _d2740eba,
+    name: "typography"
+  }, {
+    path: "/user-profile",
+    component: _3c7983ca,
+    name: "user-profile"
+  }, {
+    path: "/",
+    component: _1abf4ee4,
+    name: "index"
+  }],
 
   fallback: false
 }
 
-export function createRouter() {
+export function createRouter () {
   return new Router(routerOptions)
 }

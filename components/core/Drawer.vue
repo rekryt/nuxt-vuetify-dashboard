@@ -42,13 +42,13 @@
 
 		<template v-slot:append>
 			<v-list nav>
-				<v-list-item to="/upgrade">
+				<v-list-item to="#">
 					<v-list-item-action>
 						<v-icon>mdi-package-up</v-icon>
 					</v-list-item-action>
 
 					<v-list-item-title class="font-weight-light">
-						Upgrade To PRO
+						Something else
 					</v-list-item-title>
 				</v-list-item>
 			</v-list>
