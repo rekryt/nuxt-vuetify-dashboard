@@ -24,4 +24,7 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
+For detailed explanation on how things work, check out:
+- [Material-dashboard](https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html) documentation
+- [Vuetify.js](https://vuetifyjs.com/) documentation
+- [Nuxt.js](https://github.com/nuxt/nuxt.js)
