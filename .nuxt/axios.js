@@ -80,7 +80,10 @@ const setupProgress = (axios) => {
     set: () => { }
   }
 
-  const $loading = () => (window.$nuxt && window.$nuxt.$loading && window.$nuxt.$loading.set) ? window.$nuxt.$loading : noopLoading
+  const $loading = () => {
+    const $nuxt = typeof window !== 'undefined' && window['$nuxt']
+    return ($nuxt && $nuxt.$loading && $nuxt.$loading.set) ? $nuxt.$loading : noopLoading
+  }
 
   let currentRequests = 0
 
@@ -132,10 +135,12 @@ const setupProgress = (axios) => {
 }
 
 export default (ctx, inject) => {
+  // runtimeConfig
+  const runtimeConfig = ctx.$config && ctx.$config.axios || {}
   // baseURL
   const baseURL = process.browser
-      ? 'http://localhost:3000/'
-      : (process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/')
+    ? (runtimeConfig.browserBaseURL || runtimeConfig.baseURL || 'http://localhost:3000/')
+      : (runtimeConfig.baseURL || process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/')
 
   // Create fresh objects for all default header scopes
   // Axios creates only one which is shared across SSR requests!
@@ -158,14 +163,13 @@ export default (ctx, inject) => {
   }
 
   // Proxy SSR request headers headers
-  axiosOptions.headers.common = (ctx.req && ctx.req.headers) ? Object.assign({}, ctx.req.headers) : {}
-  delete axiosOptions.headers.common['accept']
-  delete axiosOptions.headers.common['host']
-  delete axiosOptions.headers.common['cf-ray']
-  delete axiosOptions.headers.common['cf-connecting-ip']
-  delete axiosOptions.headers.common['content-length']
-  delete axiosOptions.headers.common['content-md5']
-  delete axiosOptions.headers.common['content-type']
+  if (process.server && ctx.req && ctx.req.headers) {
+    const reqHeaders = { ...ctx.req.headers }
+    for (let h of ["accept","host","cf-ray","cf-connecting-ip","content-length","content-md5","content-type"]) {
+      delete reqHeaders[h]
+    }
+    axiosOptions.headers.common = { ...reqHeaders, ...axiosOptions.headers.common }
+  }
 
   if (process.server) {
     // Don't accept brotli encoding because Node can't parse it

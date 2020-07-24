@@ -7,7 +7,7 @@
 		color="grey darken-2"
 		dark
 		floating
-		mobile-break-point="991"
+		mobile-breakpoint="991"
 		persistent
 		width="260"
 	>

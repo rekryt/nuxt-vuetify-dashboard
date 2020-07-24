@@ -41,6 +41,18 @@ module.exports = {
 	 */
 	build: {
 		extractCSS: true,
+		optimization: {
+			splitChunks: {
+				cacheGroups: {
+					styles: {
+						name: 'styles',
+						test: /\.(css|vue)$/,
+						chunks: 'all',
+						enforce: true,
+					},
+				},
+			},
+		},
 		extend(config, ctx) {
 			// Run ESLint on save
 			if (ctx.isDev && ctx.isClient) {
@@ -57,7 +69,21 @@ module.exports = {
 		},
 		transpile: [/^vuetify/],
 	},
+	/*
+	 ** Nuxt.js dev-modules
+	 */
+	buildModules: [
+		// Doc: https://github.com/nuxt-community/eslint-module
+		'@nuxtjs/eslint-module',
+	],
+	/*
+	 ** Nuxt.js modules
+	 */
 	modules: ['@nuxtjs/axios'],
+	/*
+	 ** Axios module configuration
+	 ** See https://axios.nuxtjs.org/options
+	 */
 	axios: {
 		// proxyHeaders: false
 	},

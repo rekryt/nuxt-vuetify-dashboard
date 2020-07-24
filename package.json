@@ -1,6 +1,6 @@
 {
 	"name": "nuxt-vuetify-dashboard",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Nuxt.js + Vuetify.js project",
 	"author": "Rekryt <rekrytkw@gmail.com>",
 	"private": true,
@@ -11,70 +11,33 @@
 		"generate": "nuxt generate"
 	},
 	"dependencies": {
-		"@ckeditor/ckeditor5-build-classic": "^17.0.0",
+		"@ckeditor/ckeditor5-build-classic": "^20.0.0",
 		"@ckeditor/ckeditor5-vue": "^1.0.1",
-		"@nuxtjs/axios": "^5.9.5",
-		"nuxt": "^2.11.0",
-		"vue-chartist": "^2.2.1",
-		"vuetify": "^2.2.14"
+		"@nuxtjs/axios": "^5.12.0",
+		"nuxt": "^2.13.3",
+		"vue-chartist": "^2.3.1",
+		"vuetify": "^2.3.5"
 	},
 	"devDependencies": {
-		"@mdi/font": "^4.9.95",
+		"@mdi/font": "^5.3.45",
+		"@nuxtjs/eslint-config": "^3.0.0",
+		"@nuxtjs/eslint-module": "^2.0.0",
 		"@vue/eslint-config-prettier": "^6.0.0",
-		"babel-eslint": "^10.0.3",
+		"babel-eslint": "^10.1.0",
 		"eslint": "^6.8.0",
-		"eslint-config-standard": "^14.1.0",
-		"eslint-config-vuetify": "^0.5.0",
-		"eslint-loader": "^3.0.3",
-		"eslint-config-prettier": "^6.10.1",
-		"eslint-plugin-nuxt": ">=0.5.2",
-		"eslint-plugin-prettier": "^3.1.3",
-		"prettier": "^2.0.4",
-		"less": "^3.11.1",
-		"less-loader": "^5.0.0",
-		"sass": "^1.25.0",
-		"sass-loader": "^8.0.2",
-		"stylus": "^0.54.7",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-config-standard": "^14.1.1",
+		"eslint-config-vuetify": "^0.6.1",
+		"eslint-loader": "^4.0.2",
+		"eslint-plugin-nuxt": ">=1.0.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"eslint-plugin-vue": "^6.2.2",
+		"less": "^3.12.2",
+		"less-loader": "^6.2.0",
+		"prettier": "^2.0.5",
+		"sass": "^1.26.10",
+		"sass-loader": "^9.0.2",
+		"stylus": "^0.54.8",
 		"stylus-loader": "^3.0.2"
-	},
-	"prettier": {
-		"useTabs": true,
-		"printWidth": 120,
-		"tabWidth": 4,
-		"trailingComma": "es5",
-		"jsxBracketSameLine": false,
-		"bracketSpacing": true,
-		"semi": true,
-		"singleQuote": true,
-		"htmlWhitespaceSensitivity": "ignore"
-	},
-	"eslintConfig": {
-		"root": true,
-		"env": {
-			"node": true,
-			"browser": true,
-			"es6": true
-		},
-		"extends": [
-			"plugin:vue/essential",
-			"@vue/prettier"
-		],
-		"rules": {
-			"no-console": "off",
-			"vue/multiline-html-element-content-newline": [
-				2,
-				{
-					"ignoreWhenEmpty": true,
-					"ignores": [
-						"pre",
-						"textarea"
-					],
-					"allowEmptyLines": false
-				}
-			]
-		},
-		"parserOptions": {
-			"parser": "babel-eslint"
-		}
 	}
 }
