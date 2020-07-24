@@ -80,7 +80,7 @@
 							<h2 class="title font-weight-light mb-2">
 								Notification Places
 							</h2>
-							<span class=" subheading font-weight-light grey--text">
+							<span class="subheading font-weight-light grey--text">
 								Click to view notifications
 							</span>
 						</div>

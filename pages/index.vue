@@ -138,7 +138,7 @@
 				<material-card class="card-tabs" color="green">
 					<template v-slot:header>
 						<v-tabs v-model="tabs" background-color="transparent" slider-color="white">
-							<span class="subheading font-weight-light mx-3" style="align-self: center">
+							<span class="subheading font-weight-light mx-3" style="align-self: center;">
 								Tasks:
 							</span>
 							<v-tab class="mr-3">
@@ -391,7 +391,7 @@ export default {
 						{
 							seriesBarDistance: 5,
 							axisX: {
-								labelInterpolationFnc: function(value) {
+								labelInterpolationFnc: function (value) {
 									return value[0];
 								},
 							},

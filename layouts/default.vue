@@ -8,6 +8,10 @@
 </template>
 
 <script>
+import Drawer from '@/components/core/Drawer';
+import Footer from '@/components/core/Footer';
+import AppBar from '@/components/core/AppBar';
+import View from '@/components/core/View';
 export default {
 	props: {
 		source: String,
@@ -16,10 +20,10 @@ export default {
 		drawer: null,
 	}),
 	components: {
-		CoreDrawer: () => import('@/components/core/Drawer'),
-		CoreFooter: () => import('@/components/core/Footer'),
-		CoreAppBar: () => import('@/components/core/AppBar'),
-		CoreView: () => import('@/components/core/View'),
+		CoreDrawer: Drawer,
+		CoreFooter: Footer,
+		CoreAppBar: AppBar,
+		CoreView: View,
 	},
 };
 </script>

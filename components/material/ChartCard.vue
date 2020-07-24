@@ -48,7 +48,7 @@ export default {
 		type: {
 			type: String,
 			required: true,
-			validator: v => ['Bar', 'Line', 'Pie'].includes(v),
+			validator: (v) => ['Bar', 'Line', 'Pie'].includes(v),
 		},
 	},
 };
