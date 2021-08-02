@@ -6,23 +6,31 @@
 
 ## Build Setup
 
-```bash
+```shell
 # install dependencies
 $ npm install # Or yarn install
 
-# install babel 7 (optional)
-$ npm install --save-dev @babel/core @babel/preset-env
-
 # serve with hot reload at localhost:3000
 $ npm run dev
+```
+Open http://localhost:3000
 
+## Production
+```shell
 # build for production and launch server
 $ npm run build
 $ npm start
 
-# generate static project
-$ npm run generate
+# or generate static project
+# npm run generate
 ```
+
+## Docker
+```shell
+$ docker build -t nuxt_dashboard .
+$ docker run -it -e HOST=0.0.0.0 -p 3000:3000 nuxt_dashboard
+```
+Open http://`docker-machine ip`:3000
 
 For detailed explanation on how things work, check out:
 - [Material-dashboard](https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html) documentation
