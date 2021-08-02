@@ -14,9 +14,7 @@
                 <v-text-field class="mr-4 purple-input" color="purple" label="Search..." hide-details />
 
                 <v-btn icon to="/">
-                    <v-icon color="tertiary">
-                        mdi-view-dashboard
-                    </v-icon>
+                    <v-icon color="tertiary">mdi-view-dashboard</v-icon>
                 </v-btn>
 
                 <v-menu bottom left offset-y transition="slide-y-transition">
@@ -26,9 +24,7 @@
                                 <template slot="badge">
                                     {{ notifications.length }}
                                 </template>
-                                <v-icon color="tertiary">
-                                    mdi-bell
-                                </v-icon>
+                                <v-icon color="tertiary">mdi-bell</v-icon>
                             </v-badge>
                         </v-btn>
                     </template>
@@ -43,9 +39,7 @@
                 </v-menu>
 
                 <v-btn to="/user-profile" icon>
-                    <v-icon color="tertiary">
-                        mdi-account
-                    </v-icon>
+                    <v-icon color="tertiary">mdi-account</v-icon>
                 </v-btn>
             </v-row>
         </v-toolbar-items>

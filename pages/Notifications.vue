@@ -5,15 +5,11 @@
                 <material-card color="success">
                     <template v-slot:header>
                         <div class="px-3">
-                            <div class="title font-weight-light mb-2">
-                                Notifications
-                            </div>
+                            <div class="title font-weight-light mb-2">Notifications</div>
 
                             <div class="category">
                                 Handcrafted by us with
-                                <v-icon size="17">
-                                    mdi-heart
-                                </v-icon>
+                                <v-icon size="17">mdi-heart</v-icon>
                             </div>
                         </div>
                     </template>
@@ -21,9 +17,7 @@
                     <v-card-text>
                         <v-row>
                             <v-col cols="12" md="6">
-                                <h2 class="title font-weight-light mb-3">
-                                    Notifications Style
-                                </h2>
+                                <h2 class="title font-weight-light mb-3">Notifications Style</h2>
 
                                 <material-notification class="mb-3" color="info">
                                     This is a plain notification
@@ -45,9 +39,7 @@
                             </v-col>
 
                             <v-col cols="12" md="6">
-                                <h2 class="title font-weight-light">
-                                    Notifcation States
-                                </h2>
+                                <h2 class="title font-weight-light">Notifcation States</h2>
 
                                 <material-notification class="mb-3" color="info" dismissible>
                                     <strong>INFO</strong>
@@ -77,53 +69,37 @@
                         </v-row>
 
                         <div class="text-center">
-                            <h2 class="title font-weight-light mb-2">
-                                Notification Places
-                            </h2>
-                            <span class="subheading font-weight-light grey--text">
-                                Click to view notifications
-                            </span>
+                            <h2 class="title font-weight-light mb-2">Notification Places</h2>
+                            <span class="subheading font-weight-light grey--text">Click to view notifications</span>
                         </div>
 
                         <v-container>
                             <v-row justify="center">
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('top', 'left')">
-                                        Top Left
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('top', 'left')">Top Left</v-btn>
                                 </v-col>
 
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('top')">
-                                        Top Center
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('top')">Top Center</v-btn>
                                 </v-col>
                             </v-row>
 
                             <v-row justify="center">
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('top', 'right')">
-                                        Top Right
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('top', 'right')">Top Right</v-btn>
                                 </v-col>
 
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('bottom', 'left')">
-                                        Bottom Left
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('bottom', 'left')">Bottom Left</v-btn>
                                 </v-col>
                             </v-row>
 
                             <v-row justify="center">
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('bottom')">
-                                        Bottom Center
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('bottom')">Bottom Center</v-btn>
                                 </v-col>
                                 <v-col cols="12" sm="4">
-                                    <v-btn block color="success" @click="snack('bottom', 'right')">
-                                        Bottom Right
-                                    </v-btn>
+                                    <v-btn block color="success" @click="snack('bottom', 'right')">Bottom Right</v-btn>
                                 </v-col>
                             </v-row>
                         </v-container>
@@ -138,18 +114,14 @@
                             :timeout="900000"
                             dark
                         >
-                            <v-icon color="white" class="mr-3">
-                                mdi-bell-plus
-                            </v-icon>
+                            <v-icon color="white" class="mr-3">mdi-bell-plus</v-icon>
                             <div>
                                 Welcome to
                                 <b>Vuetify Material Dashboard</b>
                                 - a beautiful freebie for every web developer.
                             </div>
                             <v-btn icon @click="snackbar = false">
-                                <v-icon>
-                                    mdi-close-circle
-                                </v-icon>
+                                <v-icon>mdi-close-circle</v-icon>
                             </v-btn>
                         </v-snackbar>
                     </v-card-text>

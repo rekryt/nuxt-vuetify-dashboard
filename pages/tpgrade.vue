@@ -11,33 +11,23 @@
                         <thead>
                             <tr>
                                 <th />
-                                <th class="subheading font-weight-light">
-                                    Free
-                                </th>
-                                <th class="subheading font-weight-light">
-                                    PRO
-                                </th>
+                                <th class="subheading font-weight-light">Free</th>
+                                <th class="subheading font-weight-light">PRO</th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
                             <tr>
-                                <th class="text-left font-weight-light subheading">
-                                    Components
-                                </th>
+                                <th class="text-left font-weight-light subheading">Components</th>
                                 <td>60</td>
                                 <td>200</td>
                             </tr>
                             <tr>
-                                <th class="text-left font-weight-light subheading">
-                                    Plugins
-                                </th>
+                                <th class="text-left font-weight-light subheading">Plugins</th>
                                 <td>2</td>
                                 <td>4</td>
                             </tr>
                             <tr>
-                                <th class="text-left font-weight-light subheading">
-                                    Example Pages
-                                </th>
+                                <th class="text-left font-weight-light subheading">Example Pages</th>
                                 <td>3</td>
                                 <td>8</td>
                             </tr>
@@ -46,29 +36,19 @@
                                     Login, Register, Pricing, Lock Pages
                                 </th>
                                 <td>
-                                    <v-icon color="error">
-                                        mdi-close
-                                    </v-icon>
+                                    <v-icon color="error">mdi-close</v-icon>
                                 </td>
                                 <td>
-                                    <v-icon color="success">
-                                        mdi-check
-                                    </v-icon>
+                                    <v-icon color="success">mdi-check</v-icon>
                                 </td>
                             </tr>
                             <tr>
-                                <th class="text-left font-weight-light subheading">
-                                    Premium Support
-                                </th>
+                                <th class="text-left font-weight-light subheading">Premium Support</th>
                                 <td>
-                                    <v-icon color="error">
-                                        mdi-close
-                                    </v-icon>
+                                    <v-icon color="error">mdi-close</v-icon>
                                 </td>
                                 <td>
-                                    <v-icon color="success">
-                                        mdi-check
-                                    </v-icon>
+                                    <v-icon color="success">mdi-check</v-icon>
                                 </td>
                             </tr>
                             <tr>

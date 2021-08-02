@@ -20,9 +20,7 @@
                 <v-img src="https://cdn.vuetifyjs.com/images/logos/v.png" height="34" contain />
             </v-list-item-avatar>
 
-            <v-list-item-title class="title">
-                VUETIFY MD
-            </v-list-item-title>
+            <v-list-item-title class="title">VUETIFY MD</v-list-item-title>
         </v-list-item>
 
         <v-divider class="mx-3 mb-3" />
@@ -47,9 +45,7 @@
                         <v-icon>mdi-package-up</v-icon>
                     </v-list-item-action>
 
-                    <v-list-item-title class="font-weight-light">
-                        Something else
-                    </v-list-item-title>
+                    <v-list-item-title class="font-weight-light">Something else</v-list-item-title>
                 </v-list-item>
             </v-list>
         </template>

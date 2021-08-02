@@ -8,25 +8,17 @@
                     color="info"
                     type="Line"
                 >
-                    <h4 class="title font-weight-light">
-                        Daily Sales
-                    </h4>
+                    <h4 class="title font-weight-light">Daily Sales</h4>
 
                     <p class="category d-inline-flex font-weight-light">
-                        <v-icon color="green" small>
-                            mdi-arrow-up
-                        </v-icon>
+                        <v-icon color="green" small>mdi-arrow-up</v-icon>
                         <span class="green--text">55%</span>
                         &nbsp; increase in today's sales
                     </p>
 
                     <template v-slot:actions>
-                        <v-icon class="mr-2" small>
-                            mdi-clock-outline
-                        </v-icon>
-                        <span class="caption grey--text font-weight-light">
-                            updated 4 minutes ago
-                        </span>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
                     </template>
                 </material-chart-card>
             </v-col>
@@ -38,20 +30,12 @@
                     color="red"
                     type="Bar"
                 >
-                    <h4 class="title font-weight-light">
-                        Email Subscription
-                    </h4>
-                    <p class="category d-inline-flex font-weight-light">
-                        Last Campaign Performance
-                    </p>
+                    <h4 class="title font-weight-light">Email Subscription</h4>
+                    <p class="category d-inline-flex font-weight-light">Last Campaign Performance</p>
 
                     <template v-slot:actions>
-                        <v-icon class="mr-2" small>
-                            mdi-clock-outline
-                        </v-icon>
-                        <span class="caption grey--text font-weight-light">
-                            updated 10 minutes ago
-                        </span>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
                     </template>
                 </material-chart-card>
             </v-col>
@@ -63,20 +47,12 @@
                     color="green"
                     type="Line"
                 >
-                    <h3 class="title font-weight-light">
-                        Completed Tasks
-                    </h3>
-                    <p class="category d-inline-flex font-weight-light">
-                        Last Last Campaign Performance
-                    </p>
+                    <h3 class="title font-weight-light">Completed Tasks</h3>
+                    <p class="category d-inline-flex font-weight-light">Last Last Campaign Performance</p>
 
                     <template v-slot:actions>
-                        <v-icon class="mr-2" small>
-                            mdi-clock-outline
-                        </v-icon>
-                        <span class="caption grey--text font-weight-light">
-                            campaign sent 26 minutes ago
-                        </span>
+                        <v-icon class="mr-2" small>mdi-clock-outline</v-icon>
+                        <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
                     </template>
                 </material-chart-card>
             </v-col>
@@ -138,25 +114,17 @@
                 <material-card class="card-tabs" color="green">
                     <template v-slot:header>
                         <v-tabs v-model="tabs" background-color="transparent" slider-color="white">
-                            <span class="subheading font-weight-light mx-3" style="align-self: center;">
-                                Tasks:
-                            </span>
+                            <span class="subheading font-weight-light mx-3" style="align-self: center">Tasks:</span>
                             <v-tab class="mr-3">
-                                <v-icon class="mr-2">
-                                    mdi-bug
-                                </v-icon>
+                                <v-icon class="mr-2">mdi-bug</v-icon>
                                 Bugs
                             </v-tab>
                             <v-tab class="mr-3">
-                                <v-icon class="mr-2">
-                                    mdi-code-tags
-                                </v-icon>
+                                <v-icon class="mr-2">mdi-code-tags</v-icon>
                                 Website
                             </v-tab>
                             <v-tab>
-                                <v-icon class="mr-2">
-                                    mdi-cloud
-                                </v-icon>
+                                <v-icon class="mr-2">mdi-cloud</v-icon>
                                 Server
                             </v-tab>
                         </v-tabs>
@@ -184,9 +152,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="primary">
-                                                        mdi-pencil
-                                                    </v-icon>
+                                                    <v-icon color="primary">mdi-pencil</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Edit</span>
@@ -201,9 +167,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="error">
-                                                        mdi-close
-                                                    </v-icon>
+                                                    <v-icon color="error">mdi-close</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Close</span>
@@ -232,9 +196,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="primary">
-                                                        mdi-pencil
-                                                    </v-icon>
+                                                    <v-icon color="primary">mdi-pencil</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Edit</span>
@@ -249,9 +211,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="error">
-                                                        mdi-close
-                                                    </v-icon>
+                                                    <v-icon color="error">mdi-close</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Close</span>
@@ -281,9 +241,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="primary">
-                                                        mdi-pencil
-                                                    </v-icon>
+                                                    <v-icon color="primary">mdi-pencil</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Edit</span>
@@ -298,9 +256,7 @@
                                                     v-bind="attrs"
                                                     v-on="on"
                                                 >
-                                                    <v-icon color="error">
-                                                        mdi-close
-                                                    </v-icon>
+                                                    <v-icon color="error">mdi-close</v-icon>
                                                 </v-btn>
                                             </template>
                                             <span>Close</span>

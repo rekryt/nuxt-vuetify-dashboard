@@ -9,16 +9,14 @@
         offset-x
         transition="slide-y-transition"
     >
-        <v-btn slot="activator" class="elevation-0" color="grey" dark fab fixed style="top: 96px;" top>
+        <v-btn slot="activator" class="elevation-0" color="grey" dark fab fixed style="top: 96px" top>
             <v-icon>mdi-settings</v-icon>
         </v-btn>
         <v-card>
             <v-container grid-list-xl>
                 <v-row>
                     <v-col cols="12">
-                        <div class="text-center body-2 text-uppercase sidebar-filter">
-                            Sidebar Filters
-                        </div>
+                        <div class="text-center body-2 text-uppercase sidebar-filter">Sidebar Filters</div>
 
                         <v-row justify-center>
                             <v-avatar
@@ -33,9 +31,7 @@
                     </v-col>
 
                     <v-col cols="12">
-                        <div class="text-center body-2 text-uppercase sidebar-filter">
-                            Images
-                        </div>
+                        <div class="text-center body-2 text-uppercase sidebar-filter">Images</div>
                     </v-col>
 
                     <v-col v-for="img in images" :key="img" cols="3">
@@ -48,22 +44,16 @@
                     </v-col>
 
                     <v-col cols="12">
-                        <v-btn color="green" block>
-                            Free Download
-                        </v-btn>
+                        <v-btn color="green" block>Free Download</v-btn>
                     </v-col>
 
                     <v-col cols="12">
-                        <v-btn class="white--text" color="purple" block>
-                            Documentation
-                        </v-btn>
+                        <v-btn class="white--text" color="purple" block>Documentation</v-btn>
                     </v-col>
 
                     <v-col cols="12">
                         <div class="text-center body-2 text-uppercase">
-                            <div class="sidebar-filter">
-                                Thank You for Sharing!
-                            </div>
+                            <div class="sidebar-filter">Thank You for Sharing!</div>
 
                             <div>
                                 <v-btn color="indigo" class="mr-2 v-btn-facebook" dark fab icon small>

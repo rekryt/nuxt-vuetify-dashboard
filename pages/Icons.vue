@@ -5,14 +5,10 @@
                 <material-card color="green">
                     <template v-slot:header>
                         <div class="px-3">
-                            <div class="title font-weight-light mb-2">
-                                Material Design Icons
-                            </div>
+                            <div class="title font-weight-light mb-2">Material Design Icons</div>
                             <div class="category font-weight-thin">
                                 See all available
-                                <a class="white--text" href="https://materialdesignicons.com/" target="_blank">
-                                    Icons
-                                </a>
+                                <a class="white--text" href="https://materialdesignicons.com/" target="_blank">Icons</a>
                             </div>
                         </div>
                     </template>
@@ -34,9 +30,7 @@
 
             <v-col cols="auto" class="mx-auto">
                 <v-btn large color="success" href="https://materialdesignicons.com/" target="_blank">
-                    <v-icon left>
-                        mdi-material-design
-                    </v-icon>
+                    <v-icon left>mdi-material-design</v-icon>
                     <span>See all icons</span>
                 </v-btn>
             </v-col>

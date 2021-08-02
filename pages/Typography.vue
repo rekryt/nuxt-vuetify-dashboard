@@ -4,9 +4,7 @@
             <v-col cols="12">
                 <material-card color="green" title="Material Dashboard Heading" text="Created using Roboto Font Family">
                     <v-card-text>
-                        <h2 class="font-weight-light mb-4">
-                            Typography
-                        </h2>
+                        <h2 class="font-weight-light mb-4">Typography</h2>
 
                         <v-container class="pa-0" fluid>
                             <v-row v-for="(t, i) in typography" :key="i" align="end">
@@ -23,15 +21,11 @@
                                         <p v-if="i === 'quote'">
                                             {{ t[1] }}
                                         </p>
-                                        <small v-if="i === 'quote'">
-                                            Kanye West, Musician
-                                        </small>
+                                        <small v-if="i === 'quote'">Kanye West, Musician</small>
 
                                         <template v-if="i === 'small'">
                                             <br />
-                                            <small>
-                                                Use 'small' tag for the headers
-                                            </small>
+                                            <small>Use 'small' tag for the headers</small>
                                         </template>
                                     </component>
                                 </v-col>
