@@ -1,5 +1,5 @@
 {
-	"useTabs": true,
+	"useTabs": false,
 	"printWidth": 120,
 	"tabWidth": 4,
 	"trailingComma": "es5",
@@ -9,6 +9,5 @@
 	"singleQuote": true,
 	"htmlWhitespaceSensitivity": "ignore",
 	"phpVersion": "7.1",
-	"braceStyle": "1tbs",
-	"endOfLine": "auto"
+	"braceStyle": "1tbs"
 }
