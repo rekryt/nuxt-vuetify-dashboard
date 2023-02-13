@@ -3,7 +3,7 @@
         <v-row>
             <v-col cols="12">
                 <material-card color="green">
-                    <template v-slot:header>
+                    <template #header>
                         <div class="px-3">
                             <div class="title font-weight-light mb-2">Material Design Icons</div>
                             <div class="category font-weight-thin">
@@ -15,14 +15,16 @@
 
                     <v-row align="center" justify="center">
                         <v-col v-for="icon in icons" :key="icon" class="ma-2">
-                            <v-tooltip top content-class="top">
-                                <template v-slot:activator="{ attrs, on }">
-                                    <v-icon v-bind="attrs" v-on="on">
-                                        {{ icon }}
-                                    </v-icon>
-                                </template>
-                                <span>{{ icon }}</span>
-                            </v-tooltip>
+                            <client-only>
+                                <v-tooltip top content-class="top">
+                                    <template #activator="{ params }">
+                                        <v-icon v-bind="params">
+                                            {{ icon }}
+                                        </v-icon>
+                                    </template>
+                                    <span>{{ icon }}</span>
+                                </v-tooltip>
+                            </client-only>
                         </v-col>
                     </v-row>
                 </material-card>

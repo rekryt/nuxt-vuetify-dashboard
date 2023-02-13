@@ -3,7 +3,7 @@
         <v-row align="center" justify="center">
             <v-col cols="12">
                 <material-card color="success">
-                    <template v-slot:header>
+                    <template #header>
                         <div class="px-3">
                             <div class="title font-weight-light mb-2">Notifications</div>
 
@@ -142,20 +142,16 @@ export default {
         right: false,
         snackbar: false,
     }),
-
     methods: {
         snack(...args) {
             this.top = false;
             this.bottom = false;
             this.left = false;
             this.right = false;
-
             for (const loc of args) {
                 this[loc] = true;
             }
-
             this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
-
             this.snackbar = true;
         },
     },

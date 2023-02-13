@@ -1,12 +1,11 @@
 <template>
-    <v-card :style="styles" v-bind="$attrs" v-on="$listeners">
+    <v-card class="v-card--material-card" :style="styles" v-bind="$attrs">
         <helper-offset v-if="hasOffset" :inline="inline" :full-width="fullWidth" :offset="offset">
             <v-card
                 v-if="!$slots.offset"
                 :color="color"
                 :elevation="elevation"
                 class="v-card--material__header d-flex align-center"
-                dark
                 min-height="80"
             >
                 <slot v-if="!title && !text" name="header" />
@@ -83,3 +82,8 @@ export default {
     },
 };
 </script>
+<style>
+.v-card--material-card {
+    overflow: visible;
+}
+</style>

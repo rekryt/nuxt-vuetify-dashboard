@@ -44,7 +44,6 @@ const leader =
 const leaderShort = leader.slice(0, 105) + '...';
 const material = 'The Life of Material Dashboard';
 const small = 'Header with small subtitle';
-
 export default {
     data: () => ({
         typography: {

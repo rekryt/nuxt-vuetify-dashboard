@@ -1,12 +1,10 @@
 module.exports = {
     apps: [
         {
-            name: 'production',
-            script: 'npm',
-            args: 'run start',
-            env: {
-                PORT: 4000,
-            },
-        },
-    ],
-};
+            name: 'NuxtAppName',
+            exec_mode: 'cluster',
+            instances: 'max',
+            script: './.output/server/index.mjs'
+        }
+    ]
+}

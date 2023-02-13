@@ -1,10 +1,10 @@
 <template>
     <v-main class="grey lighten-3">
-        <div id="core-view">
-            <v-fade-transition mode="out-in">
-                <nuxt></nuxt>
-            </v-fade-transition>
-        </div>
+        <v-fade-transition mode="out-in">
+            <div id="core-view">
+                <slot></slot>
+            </div>
+        </v-fade-transition>
     </v-main>
 </template>
 
@@ -19,3 +19,10 @@ export default {
     },
 };
 </script>
+<style lang="scss">
+#core-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+</style>

@@ -60,9 +60,14 @@
             </v-col>
             <v-col cols="12" md="4">
                 <material-card class="v-card-profile">
-                    <v-avatar slot="offset" class="mx-auto d-block elevation-6" size="130">
-                        <img src="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg" />
-                    </v-avatar>
+                    <template #offset>
+                        <v-avatar
+                            class="mx-auto d-block elevation-6"
+                            image="https://demos.creative-tim.com/vue-material-dashboard/img/marc.aba54d65.jpg"
+                            size="130"
+                        ></v-avatar>
+                    </template>
+
                     <v-card-text class="text-center">
                         <h6 class="overline mb-3">CEO / CO-FOUNDER</h6>
 
@@ -80,7 +85,3 @@
         </v-row>
     </v-container>
 </template>
-
-<script>
-export default {};
-</script>

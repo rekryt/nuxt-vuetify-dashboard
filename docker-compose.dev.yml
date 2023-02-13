@@ -1,0 +1,18 @@
+version: '3'
+services:
+    nuxt:
+        restart: unless-stopped
+        build:
+            context: .
+        volumes:
+            - ./.nuxt/:/home/nuxt/.nuxt/
+            - ./content/:/home/nuxt/content/
+            - ./assets/:/home/nuxt/assets/
+            - ./nuxt.config.ts:/home/nuxt/nuxt.config.ts
+            - ./app.config.ts:/home/nuxt/app.config.ts
+        network_mode: host
+        ports:
+            - '3000:3000'
+        env_file:
+            - .env
+        command: ["npm", "run", "dev"]

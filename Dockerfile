@@ -1,11 +1,13 @@
-FROM node:14.16
+FROM node:18.12.0-alpine
 
-WORKDIR /var/www
+# create destination directory
+RUN mkdir -p /home/nuxt
+WORKDIR /home/nuxt
 
-COPY . /var/www
-
-RUN npm install \
-	&& npm run build
+# copy the app, note .dockerignore
+COPY . /home/nuxt/
+RUN npm install
+RUN npm run build
 
 EXPOSE 3000
 

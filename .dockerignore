@@ -1,3 +1,5 @@
-node_modules
-npm-debug*
+.git
 .nuxt
+.output
+node_modules
+tmp

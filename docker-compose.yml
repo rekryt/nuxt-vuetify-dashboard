@@ -1,11 +1,19 @@
 version: '3'
 services:
     nuxt:
-        build: '.'
-        restart: always
+        restart: unless-stopped
+        build:
+            context: .
+        networks:
+            - web
+        env_file:
+            - .env
         ports:
-            - 3000:3000
-        environment:
-            - HOST=0.0.0.0
-            - PORT=3000
-        command: 'npm run start'
+            - '3000:3000'
+        logging:
+            driver: 'json-file'
+            options:
+                max-size: '50m'
+networks:
+    web:
+        name: web

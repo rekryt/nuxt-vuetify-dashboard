@@ -1,8 +1,8 @@
-# nuxt-vuetify-dashboard
+# nuxt3-vuetify3-dashboard
 
-> Nuxt.js + Vuetify.js + Material Dashboard
+> Nuxt 3 + Vuetify 3 + Material Dashboard
 
-![alt text](http://rekryt.ru/files/nuxt-vuetify-dashboard.png)
+![alt text](http://rekryt.ru/files/nuxt3-vuetify3-dashboard.png)
 
 ## Build Setup
 
@@ -19,10 +19,7 @@ Open http://localhost:3000
 ```shell
 # build for production and launch server
 $ npm run build
-$ npm start
-
-# or generate static project
-# npm run generate
+$ npm run start
 ```
 
 ## Docker
@@ -33,6 +30,6 @@ $ docker run -it -e HOST=0.0.0.0 -p 3000:3000 nuxt_dashboard
 Open http://`docker-machine ip`:3000
 
 For detailed explanation on how things work, check out:
-- [Material-dashboard](https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html) documentation
-- [Vuetify.js](https://vuetifyjs.com/) documentation
-- [Nuxt.js](https://github.com/nuxt/nuxt.js)
+- [Vuetify 3](https://vuetifyjs.com/) documentation
+- [Nuxt 3](https://nuxt.com)
+- [Material-dashboard](https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html) old documentation

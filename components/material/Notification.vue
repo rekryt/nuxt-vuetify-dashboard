@@ -1,5 +1,5 @@
 <template>
-    <v-alert v-bind="$attrs" :elevation="elevation" :value="value" :dark="dark" v-on="$listeners">
+    <v-alert v-bind="$attrs" :elevation="elevation" :value="value" :dark="dark">
         <slot />
     </v-alert>
 </template>

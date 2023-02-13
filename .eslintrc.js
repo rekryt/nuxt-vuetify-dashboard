@@ -1,28 +1,24 @@
 module.exports = {
     env: {
         browser: true,
-        es6: true,
+        es2021: true,
         node: true,
     },
-    extends: ['eslint:recommended', 'plugin:vue/essential', 'plugin:nuxt/recommended', '@vue/prettier'],
-    globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly',
-    },
+    extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:nuxt/recommended',
+        'plugin:vue/vue3-recommended',
+        'prettier',
+    ],
     parserOptions: {
-        ecmaVersion: 2018,
+        ecmaVersion: 'latest',
+        parser: '@typescript-eslint/parser',
         sourceType: 'module',
     },
-    plugins: ['vue'],
+    plugins: ['@typescript-eslint'],
     rules: {
-        'no-console': 'off',
-        'vue/multiline-html-element-content-newline': [
-            2,
-            {
-                ignoreWhenEmpty: true,
-                ignores: ['pre', 'textarea'],
-                allowEmptyLines: false,
-            },
-        ],
+        'vue/html-indent': 'off',
+        'vue/html-self-closing': 'off',
+        'vue/multi-word-component-names': 'off',
     },
 };

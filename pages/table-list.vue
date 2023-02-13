@@ -3,7 +3,9 @@
         <v-row justify="center">
             <v-col cols="12">
                 <material-card color="green" title="Simple Table" text="Here is a subtitle for this table">
-                    <v-data-table :headers="headers" :items="items" hide-default-footer />
+                    <client-only>
+                        <v-data-table :headers="headers" :items="items" hide-default-footer />
+                    </client-only>
                 </material-card>
             </v-col>
 
@@ -15,7 +17,9 @@
                     title="Table on Plain Background"
                     text="Here is a subtitle for this table"
                 >
-                    <v-data-table :headers="headers" :items="items.slice(0, 7)" hide-default-footer />
+                    <client-only>
+                        <v-data-table :headers="headers" :items="items.slice(0, 7)" hide-default-footer />
+                    </client-only>
                 </material-card>
             </v-col>
         </v-row>

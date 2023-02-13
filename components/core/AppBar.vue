@@ -1,7 +1,7 @@
 <template>
-    <v-app-bar id="core-app-bar" absolute app color="transparent" flat height="88">
-        <v-toolbar-title class="tertiary--text font-weight-light align-self-center">
-            <v-btn v-if="responsive" dark icon @click.stop="onClick">
+    <v-app-bar id="core-app-bar" absolute color="transparent" flat height="88">
+        <v-toolbar-title class="font-weight-light align-self-center">
+            <v-btn v-show="!responsive" icon @click.stop="onClick">
                 <v-icon>mdi-view-list</v-icon>
             </v-btn>
             {{ title }}
@@ -9,36 +9,39 @@
 
         <v-spacer />
 
-        <v-toolbar-items>
+        <v-toolbar-items class="flex-fill">
             <v-row align="center" class="mx-0">
                 <v-text-field class="mr-4 purple-input" color="purple" label="Search..." hide-details />
 
-                <v-btn icon to="/">
+                <v-btn height="48" to="/" icon>
                     <v-icon color="tertiary">mdi-view-dashboard</v-icon>
                 </v-btn>
 
-                <v-menu bottom left offset-y transition="slide-y-transition">
-                    <template v-slot:activator="{ attrs, on }">
-                        <v-btn class="toolbar-items" icon to="/notifications" v-bind="attrs" v-on="on">
-                            <v-badge color="error" overlap>
-                                <template slot="badge">
-                                    {{ notifications.length }}
-                                </template>
-                                <v-icon color="tertiary">mdi-bell</v-icon>
-                            </v-badge>
-                        </v-btn>
-                    </template>
-
-                    <v-card>
-                        <v-list dense>
-                            <v-list-item v-for="notification in notifications" :key="notification" @click="onClick">
-                                <v-list-item-title v-text="notification" />
+                <client-only>
+                    <v-menu bottom left offset-y transition="slide-y-transition">
+                        <template #activator="{ props }">
+                            <v-btn class="toolbar-items" height="48" to="/notifications" v-bind="props" icon>
+                                <v-badge color="error">
+                                    <template #badge>
+                                        {{ notifications.length }}
+                                    </template>
+                                    <v-icon color="tertiary">mdi-bell</v-icon>
+                                </v-badge>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item v-for="(item, index) in notifications" :key="index" :value="index">
+                                <v-list-item-title>{{ item }}</v-list-item-title>
                             </v-list-item>
                         </v-list>
-                    </v-card>
-                </v-menu>
+                    </v-menu>
+                </client-only>
 
-                <v-btn to="/user-profile" icon>
+                <v-btn height="48" icon @click="toggleTheme">
+                    <v-icon color="tertiary">mdi-theme-light-dark</v-icon>
+                </v-btn>
+
+                <v-btn to="/user-profile" height="48" icon>
                     <v-icon color="tertiary">mdi-account</v-icon>
                 </v-btn>
             </v-row>
@@ -48,9 +51,25 @@
 
 <script>
 // Utilities
-import { mapMutations } from 'vuex';
+import { mapActions } from 'pinia';
+import { useAppStore } from '../../stores/app';
+import { useDisplay, useTheme } from 'vuetify';
 
 export default {
+    setup() {
+        const theme = useTheme();
+        const cookieTheme = useCookieTheme();
+
+        return {
+            theme,
+            toggleTheme: () => {
+                const themeValue = theme.global.current.value.dark ? 'light' : 'dark';
+                theme.global.name.value = themeValue;
+                cookieTheme.value = themeValue;
+            },
+        };
+    },
+
     data: () => ({
         notifications: [
             'Mike, John responded to your email',
@@ -60,8 +79,14 @@ export default {
             'Another One',
         ],
         title: null,
-        responsive: false,
     }),
+
+    computed: {
+        responsive() {
+            const display = useDisplay();
+            return display.lg.value;
+        },
+    },
 
     watch: {
         $route(val) {
@@ -69,25 +94,15 @@ export default {
         },
     },
 
-    mounted() {
-        this.onResponsiveInverted();
-        window.addEventListener('resize', this.onResponsiveInverted);
-    },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.onResponsiveInverted);
+    created() {
+        this.setDrawer(this.responsive);
+        this.title = this.$route.name;
     },
 
     methods: {
-        ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
+        ...mapActions(useAppStore, ['setDrawer', 'toggleDrawer']),
         onClick() {
-            this.setDrawer(!this.$store.state.app.drawer);
-        },
-        onResponsiveInverted() {
-            if (window.innerWidth < 991) {
-                this.responsive = true;
-            } else {
-                this.responsive = false;
-            }
+            this.setDrawer(!useAppStore().drawer);
         },
     },
 };

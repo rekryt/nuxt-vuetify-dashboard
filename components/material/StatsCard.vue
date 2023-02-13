@@ -1,10 +1,12 @@
 <template>
-    <material-card class="v-card--material-stats" v-bind="$attrs" v-on="$listeners">
-        <v-card slot="offset" :class="`elevation-${elevation}`" :color="color" class="pa-4" dark>
-            <v-icon size="40">
-                {{ icon }}
-            </v-icon>
-        </v-card>
+    <material-card class="v-card--material-stats" v-bind="$attrs">
+        <template #offset>
+            <v-card :class="`elevation-${elevation}`" :color="color" class="pa-4" dark>
+                <v-icon size="40">
+                    {{ icon }}
+                </v-icon>
+            </v-card>
+        </template>
 
         <div class="text-right">
             <p class="body-2 grey--text font-weight-light mb-0" v-text="title" />
@@ -16,7 +18,7 @@
 
         <v-divider />
 
-        <template slot="actions">
+        <template #actions>
             <v-icon :color="subIconColor" size="20" class="mx-2">
                 {{ subIcon }}
             </v-icon>
@@ -77,6 +79,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    overflow: visible;
 
     .v-offset {
         display: inline-block;
@@ -85,7 +88,7 @@ export default {
         margin-left: 0;
         margin-right: auto;
         margin-bottom: 0 !important;
-        max-width: auto;
+        max-width: inherit;
         padding: 0 16px 0;
     }
 

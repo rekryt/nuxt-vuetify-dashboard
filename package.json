@@ -1,45 +1,42 @@
 {
     "name": "nuxt-vuetify-dashboard",
-    "version": "1.0.2",
-    "description": "Nuxt.js + Vuetify.js project",
+    "version": "2.0.0",
+    "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
     "scripts": {
-        "dev": "nuxt",
         "build": "nuxt build",
-        "start": "nuxt start",
-        "generate": "nuxt generate"
-    },
-    "dependencies": {
-        "nuxt": "^2.15.7",
-        "vuetify": "^2.5.8",
-        "@nuxtjs/axios": "^5.12.0",
-        "@ckeditor/ckeditor5-build-classic": "^29.0.0",
-        "@ckeditor/ckeditor5-vue2": "^1.0.5",
-        "@mdi/font": "^5.9.55",
-        "vue-chartist": "^2.3.1",
-        "core-js": "^3.15.1"
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "start": "node .output/server/index.mjs"
     },
     "devDependencies": {
-        "eslint": "^7.29.0",
-        "eslint-loader": "^4.0.2",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-config-standard": "^14.1.1",
-        "eslint-config-vuetify": "^0.6.1",
-        "eslint-plugin-nuxt": "^2.0.0",
-        "eslint-plugin-prettier": "^3.1.4",
-        "eslint-plugin-vue": "^7.12.1",
-        "prettier": "^2.2.1",
-        "@babel/core": "^7.14.8",
-        "@babel/preset-env": "^7.14.9",
-        "@nuxtjs/eslint-config": "^6.0.1",
-        "@nuxtjs/eslint-module": "^3.0.2",
-        "@vue/eslint-config-prettier": "^6.0.0",
-        "less": "^3.12.2",
-        "less-loader": "^6.2.0",
-        "sass": "~1.32.13",
-        "sass-loader": "^10.2.0",
-        "stylus": "^0.54.8",
-        "stylus-loader": "^3.0.2"
+        "@kevinmarrec/nuxt-pwa": "^0.11.1",
+        "@typescript-eslint/eslint-plugin": "^5.48.0",
+        "@typescript-eslint/parser": "^5.48.0",
+        "autoprefixer": "^10.4.13",
+        "eslint": "^8.31.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-nuxt": "^4.0.0",
+        "eslint-plugin-vue": "^9.8.0",
+        "nuxt": "3.0.0",
+        "prettier": "^2.7.1",
+        "sass": "^1.55.0",
+        "vite-plugin-eslint": "^1.8.1"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^35.4.0",
+        "@ckeditor/ckeditor5-vue": "^4.0.1",
+        "@mdi/font": "^7.1.96",
+        "@pinia/nuxt": "^0.4.6",
+        "chart.js": "^4.2.1",
+        "pinia": "^2.0.29",
+        "vue-chartjs": "^5.2.0",
+        "vuetify": "3.1.4"
+    },
+    "overrides": {
+        "vue": "latest"
     }
 }

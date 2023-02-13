@@ -1,50 +1,34 @@
 <template>
-    <v-navigation-drawer
-        id="app-drawer"
-        v-model="inputValue"
-        :src="image"
-        app
-        color="grey darken-2"
-        dark
-        floating
-        mobile-breakpoint="991"
-        persistent
-        width="260"
-    >
-        <template v-slot:img="attrs">
-            <v-img v-bind="attrs" gradient="to top, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)" />
-        </template>
+    <v-navigation-drawer id="app-drawer" v-model="inputValue" width="260" elevation="5" floating>
+        <v-list-item class="text-center" two-line>
+            <v-avatar color="white">
+                <v-img
+                    src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-light.svg"
+                    height="34"
+                    contain
+                />
+            </v-avatar>
 
-        <v-list-item two-line>
-            <v-list-item-avatar color="white">
-                <v-img src="https://cdn.vuetifyjs.com/images/logos/v.png" height="34" contain />
-            </v-list-item-avatar>
-
-            <v-list-item-title class="title">VUETIFY MD</v-list-item-title>
+            <v-list-item-title class="title">VUETIFY 3</v-list-item-title>
         </v-list-item>
 
         <v-divider class="mx-3 mb-3" />
 
-        <v-list nav>
-            <!-- Bug in Vuetify for first child of v-list not receiving proper border-radius -->
-            <div />
-
+        <v-list density="compact" nav>
             <v-list-item v-for="(link, i) in links" :key="i" :to="link.to" active-class="primary white--text">
-                <v-list-item-action>
+                <template #prepend>
                     <v-icon>{{ link.icon }}</v-icon>
-                </v-list-item-action>
-
-                <v-list-item-title v-text="link.text" />
+                </template>
+                <v-list-item-title>{{ link.text }}</v-list-item-title>
             </v-list-item>
         </v-list>
 
-        <template v-slot:append>
-            <v-list nav>
-                <v-list-item to="#">
-                    <v-list-item-action>
+        <template #append>
+            <v-list density="compact" nav>
+                <v-list-item to="/tpgrade">
+                    <template #prepend>
                         <v-icon>mdi-package-up</v-icon>
-                    </v-list-item-action>
-
+                    </template>
                     <v-list-item-title class="font-weight-light">Something else</v-list-item-title>
                 </v-list-item>
             </v-list>
@@ -54,15 +38,11 @@
 
 <script>
 // Utilities
-import { mapMutations, mapState } from 'vuex';
+
+import { mapActions, mapState } from 'pinia';
+import { useAppStore } from '../../stores/app';
 
 export default {
-    props: {
-        opened: {
-            type: Boolean,
-            default: false,
-        },
-    },
     data: () => ({
         links: [
             {
@@ -104,10 +84,10 @@ export default {
     }),
 
     computed: {
-        ...mapState('app', ['image', 'color']),
+        ...mapState(useAppStore, ['color']),
         inputValue: {
             get() {
-                return this.$store.state.app.drawer;
+                return useAppStore().drawer;
             },
             set(val) {
                 this.setDrawer(val);
@@ -116,7 +96,7 @@ export default {
     },
 
     methods: {
-        ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
+        ...mapActions(useAppStore, ['setDrawer', 'toggleDrawer']),
     },
 };
 </script>
