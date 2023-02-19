@@ -8,8 +8,6 @@ services:
             - web
         env_file:
             - .env
-        ports:
-            - '3000:3000'
         logging:
             driver: 'json-file'
             options:
