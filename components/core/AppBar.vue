@@ -84,7 +84,7 @@ export default {
     computed: {
         responsive() {
             const display = useDisplay();
-            return display.lg.value;
+            return display.lgAndUp.value;
         },
     },
 
