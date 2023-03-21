@@ -1,6 +1,6 @@
 {
     "name": "nuxt-vuetify-dashboard",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
@@ -21,12 +21,10 @@
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vue": "^9.8.0",
-        "nuxt": "3.2.3",
+        "nuxt": "3.3.1",
         "prettier": "^2.7.1",
         "sass": "^1.55.0",
-        "vite-plugin-eslint": "^1.8.1",
-        "@nuxt/kit": "3.0.0",
-        "@nuxt/vite-builder": "3.0.0"
+        "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^36.0.1",
