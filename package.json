@@ -1,6 +1,6 @@
 {
     "name": "nuxt-vuetify-dashboard",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
@@ -21,20 +21,20 @@
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vue": "^9.8.0",
-        "nuxt": "3.2.0",
+        "nuxt": "3.3.1",
         "prettier": "^2.7.1",
         "sass": "^1.55.0",
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^35.4.0",
+        "@ckeditor/ckeditor5-build-classic": "^36.0.1",
         "@ckeditor/ckeditor5-vue": "^4.0.1",
         "@mdi/font": "^7.1.96",
         "@pinia/nuxt": "^0.4.6",
         "chart.js": "^4.2.1",
         "pinia": "^2.0.29",
         "vue-chartjs": "^5.2.0",
-        "vuetify": "3.1.4"
+        "vuetify": "3.1.11"
     },
     "overrides": {
         "vue": "latest"
