@@ -1,5 +1,5 @@
 <script>
-import { VCard } from 'vuetify/lib';
+import { VCard } from 'vuetify/lib/components/VCard/index.mjs';
 
 export default {
     name: 'BaseCard',
