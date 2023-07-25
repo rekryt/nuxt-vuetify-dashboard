@@ -33,22 +33,22 @@ export default {
             {
                 sortable: false,
                 text: 'Name',
-                value: 'name',
+                key: 'name',
             },
             {
                 sortable: false,
                 text: 'Country',
-                value: 'country',
+                key: 'country',
             },
             {
                 sortable: false,
                 text: 'City',
-                value: 'city',
+                key: 'city',
             },
             {
                 sortable: false,
                 text: 'Salary',
-                value: 'salary',
+                key: 'salary',
                 align: 'right',
             },
         ],
