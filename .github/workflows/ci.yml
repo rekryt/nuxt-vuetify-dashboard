@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [18.x, 20.x]
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+            - name: Install dependency
+              run: npm i
+            - name: Check linting
+              run: npm run lint
+            - name: Check tests
+              run: npm run test
