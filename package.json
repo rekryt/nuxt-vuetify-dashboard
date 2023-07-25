@@ -22,7 +22,7 @@
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vue": "^9.11.0",
-        "nuxt": "3.4.2",
+        "nuxt": "3.6.5",
         "prettier": "^2.8.8",
         "sass": "^1.62.1",
         "vite-plugin-eslint": "^1.8.1"
@@ -31,9 +31,9 @@
         "@ckeditor/ckeditor5-build-classic": "^37.1.0",
         "@ckeditor/ckeditor5-vue": "^5.1.0",
         "@mdi/font": "^7.2.96",
-        "@pinia/nuxt": "^0.4.9",
+        "@pinia/nuxt": "0.4.11",
         "chart.js": "^4.3.0",
-        "pinia": "^2.0.35",
+        "pinia": "2.1.4",
         "vue-chartjs": "^5.2.0",
         "vuetify": "3.2.1"
     },
