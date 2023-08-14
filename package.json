@@ -33,7 +33,7 @@
         "vitest": "^0.33.0"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^38.1.1",
+        "@ckeditor/ckeditor5-build-classic": "^39.0.1",
         "@ckeditor/ckeditor5-vue": "^5.1.0",
         "@mdi/font": "^7.2.96",
         "@pinia/nuxt": "0.4.11",
