@@ -4,6 +4,7 @@
     "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
+    "license": "MIT",
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
