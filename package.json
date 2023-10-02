@@ -1,6 +1,6 @@
 {
     "name": "nuxt-vuetify-dashboard",
-    "version": "2.0.14",
+    "version": "2.0.15",
     "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
@@ -17,19 +17,19 @@
     },
     "devDependencies": {
         "@kevinmarrec/nuxt-pwa": "^0.17.0",
-        "@nuxt/test-utils": "^3.7.2",
-        "@typescript-eslint/eslint-plugin": "^6.7.0",
-        "@typescript-eslint/parser": "^6.7.0",
-        "autoprefixer": "^10.4.15",
+        "@nuxt/test-utils": "^3.7.4",
+        "@typescript-eslint/eslint-plugin": "^6.7.3",
+        "@typescript-eslint/parser": "^6.7.3",
+        "autoprefixer": "^10.4.16",
         "consola": "^3.2.3",
-        "eslint": "^8.49.0",
+        "eslint": "^8.50.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vitest": "^0.3.1",
         "eslint-plugin-vue": "^9.17.0",
         "nuxt": "3.7.4",
         "prettier": "^3.0.3",
-        "sass": "^1.66.1",
+        "sass": "^1.68.0",
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
