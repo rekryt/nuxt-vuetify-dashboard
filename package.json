@@ -40,7 +40,7 @@
         "chart.js": "^4.4.0",
         "pinia": "2.1.7",
         "vue-chartjs": "^5.2.0",
-        "vuetify": "3.3.21"
+        "vuetify": "3.3.22"
     },
     "overrides": {
         "vue": "latest"
