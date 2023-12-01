@@ -2,16 +2,11 @@ import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
 
-import { VDataTable } from 'vuetify/labs/VDataTable';
-
 export default defineNuxtPlugin((nuxtApp) => {
     const cookieTheme = useCookieTheme();
 
     const vuetify = createVuetify({
-        components: {
-            ...components,
-            VDataTable,
-        },
+        components,
         directives,
         theme: {
             defaultTheme: cookieTheme.value && cookieTheme.value !== 'system' ? cookieTheme.value : 'light',

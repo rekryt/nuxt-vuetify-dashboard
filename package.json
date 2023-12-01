@@ -1,6 +1,6 @@
 {
     "name": "nuxt-vuetify-dashboard",
-    "version": "2.0.17",
+    "version": "2.0.18",
     "description": "Nuxt3 + Vuetify3 project",
     "author": "Rekryt <rekrytkw@gmail.com>",
     "private": true,
@@ -17,30 +17,30 @@
     },
     "devDependencies": {
         "@kevinmarrec/nuxt-pwa": "^0.17.0",
-        "@nuxt/test-utils": "^3.8.0",
-        "@typescript-eslint/eslint-plugin": "^6.9.0",
-        "@typescript-eslint/parser": "^6.9.0",
+        "@nuxt/test-utils": "^3.8.1",
+        "@typescript-eslint/eslint-plugin": "^6.13.1",
+        "@typescript-eslint/parser": "^6.13.1",
         "autoprefixer": "^10.4.16",
         "consola": "^3.2.3",
-        "eslint": "^8.52.0",
+        "eslint": "^8.54.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-nuxt": "^4.0.0",
-        "eslint-plugin-vitest": "^0.3.8",
-        "eslint-plugin-vue": "^9.18.0",
+        "eslint-plugin-vitest": "^0.3.10",
+        "eslint-plugin-vue": "^9.19.2",
         "nuxt": "3.8.2",
-        "prettier": "^3.0.3",
-        "sass": "^1.69.4",
+        "prettier": "^3.1.0",
+        "sass": "^1.69.5",
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^40.0.0",
+        "@ckeditor/ckeditor5-build-classic": "^40.1.0",
         "@ckeditor/ckeditor5-vue": "^5.1.0",
         "@mdi/font": "^7.3.67",
         "@pinia/nuxt": "0.5.1",
         "chart.js": "^4.4.0",
         "pinia": "2.1.7",
         "vue-chartjs": "^5.2.0",
-        "vuetify": "3.4.3"
+        "vuetify": "3.4.4"
     },
     "overrides": {
         "vue": "latest"
