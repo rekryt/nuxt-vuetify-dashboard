@@ -18,7 +18,7 @@
     "devDependencies": {
         "@kevinmarrec/nuxt-pwa": "^0.17.0",
         "@nuxt/test-utils": "3.8.1",
-        "vitest": "0.34.6",
+        "vitest": "0.33.0",
         "@typescript-eslint/eslint-plugin": "^6.13.2",
         "@typescript-eslint/parser": "^6.13.2",
         "autoprefixer": "^10.4.16",
