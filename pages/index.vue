@@ -244,7 +244,7 @@ export default {
     data() {
         return {
             editorText:
-                '<h2>Material Dashboard</h2><blockquote><p>made by Rekryt (vk.com/krupkin.sergey)<br>feb 2023</p></blockquote><p>&nbsp;</p><p>Special thanks to:<br>https://nuxt.com<br>https://vuetifyjs.com<br>https://www.creative-tim.com</p>',
+                '<h2>Material Dashboard</h2><blockquote><p>made by Rekryt (vk.com/krupkin.sergey)<br>feb 2024</p></blockquote><p>&nbsp;</p><p>Special thanks to:<br>https://nuxt.com<br>https://vuetifyjs.com<br>https://www.creative-tim.com</p>',
             dailySalesChart: {
                 data: {
                     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],

@@ -1,4 +1,4 @@
-FROM node:18.12.0-alpine
+FROM node:18-alpine3.18
 
 # create destination directory
 RUN mkdir -p /home/nuxt
