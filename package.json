@@ -34,7 +34,7 @@
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^40.2.0",
+        "@ckeditor/ckeditor5-build-classic": "^41.1.0",
         "@ckeditor/ckeditor5-vue": "^5.1.0",
         "@mdi/font": "^7.3.67",
         "@pinia/nuxt": "0.5.1",
