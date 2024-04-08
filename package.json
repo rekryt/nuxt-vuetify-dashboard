@@ -28,7 +28,7 @@
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vitest": "^0.3.22",
         "eslint-plugin-vue": "^9.21.1",
-        "nuxt": "3.10.1",
+        "nuxt": "3.11.2",
         "prettier": "^3.2.5",
         "sass": "^1.70.0",
         "vite-plugin-eslint": "^1.8.1"
