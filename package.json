@@ -17,8 +17,8 @@
     },
     "devDependencies": {
         "@kevinmarrec/nuxt-pwa": "^0.17.0",
-        "@nuxt/test-utils": "3.13.1",
-        "vitest": "^2.0.5",
+        "@nuxt/test-utils": "3.14.1",
+        "vitest": "2.0.5",
         "@typescript-eslint/eslint-plugin": "^7.15.0",
         "@typescript-eslint/parser": "^7.15.0",
         "autoprefixer": "^10.4.19",
@@ -28,20 +28,20 @@
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vitest": "^0.5.4",
         "eslint-plugin-vue": "^9.27.0",
-        "nuxt": "3.12.3",
+        "nuxt": "3.13.1",
         "prettier": "^3.3.2",
         "sass": "^1.77.6",
         "vite-plugin-eslint": "^1.8.1"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^41.4.2",
+        "@ckeditor/ckeditor5-build-classic": "^43.1.0",
         "@ckeditor/ckeditor5-vue": "^6.0.0",
         "@mdi/font": "^7.4.47",
         "@pinia/nuxt": "0.5.1",
         "chart.js": "^4.4.3",
         "pinia": "2.1.7",
         "vue-chartjs": "^5.3.1",
-        "vuetify": "3.6.11"
+        "vuetify": "3.7.1"
     },
     "overrides": {
         "vue": "latest"
