@@ -99,9 +99,7 @@
             </v-col>
             <v-col cols="12" lg="6">
                 <material-card color="orange" title="Employee Stats" text="New employees on 15th Feb, 2023">
-                    <client-only>
-                        <v-data-table :headers="headers" :items="items" hide-default-footer />
-                    </client-only>
+                    <v-data-table :headers="headers" :items="items" hide-default-footer />
                 </material-card>
             </v-col>
             <v-col cols="12" lg="6">
@@ -134,27 +132,25 @@
                                         Sign contract for "What are conference organized afraid of?"
                                     </template>
                                     <template #append>
-                                        <client-only>
-                                            <div class="d-flex">
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" icon v-bind="props">
-                                                            <v-icon color="primary">mdi-pencil</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Edit</span>
-                                                </v-tooltip>
+                                        <div class="d-flex">
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" icon v-bind="props">
+                                                        <v-icon color="primary">mdi-pencil</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Edit</span>
+                                            </v-tooltip>
 
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
-                                                            <v-icon color="error">mdi-close</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Close</span>
-                                                </v-tooltip>
-                                            </div>
-                                        </client-only>
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
+                                                        <v-icon color="error">mdi-close</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Close</span>
+                                            </v-tooltip>
+                                        </div>
                                     </template>
                                 </v-list-item>
 
@@ -168,27 +164,25 @@
                                         Lines From Great Russian Literature? Or E-mails From My Boss?
                                     </template>
                                     <template #append>
-                                        <client-only>
-                                            <div class="d-flex">
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" icon v-bind="props">
-                                                            <v-icon color="primary">mdi-pencil</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Edit</span>
-                                                </v-tooltip>
+                                        <div class="d-flex">
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" icon v-bind="props">
+                                                        <v-icon color="primary">mdi-pencil</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Edit</span>
+                                            </v-tooltip>
 
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
-                                                            <v-icon color="error">mdi-close</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Close</span>
-                                                </v-tooltip>
-                                            </div>
-                                        </client-only>
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
+                                                        <v-icon color="error">mdi-close</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Close</span>
+                                            </v-tooltip>
+                                        </div>
                                     </template>
                                 </v-list-item>
 
@@ -203,27 +197,25 @@
                                         ravaging rain swept through metro Detroit
                                     </template>
                                     <template #append>
-                                        <client-only>
-                                            <div class="d-flex">
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" icon v-bind="props">
-                                                            <v-icon color="primary">mdi-pencil</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Edit</span>
-                                                </v-tooltip>
+                                        <div class="d-flex">
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" icon v-bind="props">
+                                                        <v-icon color="primary">mdi-pencil</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Edit</span>
+                                            </v-tooltip>
 
-                                                <v-tooltip top content-class="top">
-                                                    <template #activator="{ props }">
-                                                        <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
-                                                            <v-icon color="error">mdi-close</v-icon>
-                                                        </v-btn>
-                                                    </template>
-                                                    <span>Close</span>
-                                                </v-tooltip>
-                                            </div>
-                                        </client-only>
+                                            <v-tooltip top content-class="top">
+                                                <template #activator="{ props }">
+                                                    <v-btn class="v-btn--simple" color="danger" icon v-bind="props">
+                                                        <v-icon color="error">mdi-close</v-icon>
+                                                    </v-btn>
+                                                </template>
+                                                <span>Close</span>
+                                            </v-tooltip>
+                                        </div>
                                     </template>
                                 </v-list-item>
                             </v-list>
@@ -244,7 +236,7 @@ export default {
     data() {
         return {
             editorText:
-                '<h2>Material Dashboard</h2><blockquote><p>made by Rekryt (vk.com/krupkin.sergey)<br>feb 2024</p></blockquote><p>&nbsp;</p><p>Special thanks to:<br>https://nuxt.com<br>https://vuetifyjs.com<br>https://www.creative-tim.com</p>',
+                '<h2>Material Dashboard</h2><blockquote><p>made by Rekryt (vk.com/krupkin.sergey)<br>sep 2024</p></blockquote><p>&nbsp;</p><p>Special thanks to:<br>https://nuxt.com<br>https://vuetifyjs.com<br>https://www.creative-tim.com</p>',
             dailySalesChart: {
                 data: {
                     labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],

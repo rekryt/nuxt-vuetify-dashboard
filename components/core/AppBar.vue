@@ -17,25 +17,23 @@
                     <v-icon color="tertiary">mdi-view-dashboard</v-icon>
                 </v-btn>
 
-                <client-only>
-                    <v-menu bottom left offset-y transition="slide-y-transition">
-                        <template #activator="{ props }">
-                            <v-btn class="toolbar-items" height="48" to="/notifications" v-bind="props" icon>
-                                <v-badge color="error">
-                                    <template #badge>
-                                        {{ notifications.length }}
-                                    </template>
-                                    <v-icon color="tertiary">mdi-bell</v-icon>
-                                </v-badge>
-                            </v-btn>
-                        </template>
-                        <v-list>
-                            <v-list-item v-for="(item, index) in notifications" :key="index" :value="index">
-                                <v-list-item-title>{{ item }}</v-list-item-title>
-                            </v-list-item>
-                        </v-list>
-                    </v-menu>
-                </client-only>
+                <v-menu bottom left offset-y transition="slide-y-transition">
+                    <template #activator="{ props }">
+                        <v-btn class="toolbar-items" height="48" to="/notifications" v-bind="props" icon>
+                            <v-badge color="error">
+                                <template #badge>
+                                    {{ notifications.length }}
+                                </template>
+                                <v-icon color="tertiary">mdi-bell</v-icon>
+                            </v-badge>
+                        </v-btn>
+                    </template>
+                    <v-list>
+                        <v-list-item v-for="(item, index) in notifications" :key="index" :value="index">
+                            <v-list-item-title>{{ item }}</v-list-item-title>
+                        </v-list-item>
+                    </v-list>
+                </v-menu>
 
                 <v-btn height="48" icon @click="toggleTheme">
                     <v-icon color="tertiary">mdi-theme-light-dark</v-icon>

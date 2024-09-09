@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     typescript: {
         strict: true,
     },
+
     app: {
         head: {
             title: 'nuxt3-vuetify3-dashboard',
@@ -24,7 +25,9 @@ export default defineNuxtConfig({
             ],
         },
     },
+
     css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css', 'assets/scss/default.scss'],
+
     modules: [
         [
             '@pinia/nuxt',
@@ -39,9 +42,11 @@ export default defineNuxtConfig({
         ],
         '@kevinmarrec/nuxt-pwa',
     ],
+
     build: {
         transpile: ['vuetify'],
     },
+
     vite: {
         plugins: [eslintPlugin()],
         define: {
@@ -49,14 +54,17 @@ export default defineNuxtConfig({
         },
         server: {
             /**
-             * If develop from docker
-            watch: {
-                usePolling: true,
-            },
-            */
+           * If develop from docker
+          watch: {
+              usePolling: true,
+          },
+          */
         },
     },
+
     experimental: {
-        inlineSSRStyles: false
-    }
+        inlineSSRStyles: false,
+    },
+
+    compatibilityDate: '2024-09-09',
 });

@@ -3,7 +3,7 @@
         <v-list-item class="text-center" two-line>
             <v-avatar color="white">
                 <v-img
-                    src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-light.svg"
+                    src="https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg"
                     height="34"
                     contain
                 />
