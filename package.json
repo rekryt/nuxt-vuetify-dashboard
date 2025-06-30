@@ -39,7 +39,7 @@
         "@mdi/font": "^7.4.47",
         "@pinia/nuxt": "0.11.1",
         "chart.js": "^4.5.0",
-        "css-select": "5.1.0",
+        "css-select": "6.0.0",
         "fs-extra": "^11.3.0",
         "pinia": "3.0.3",
         "vue-chartjs": "^5.3.2",
