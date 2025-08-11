@@ -22,7 +22,7 @@
         "@typescript-eslint/parser": "8.35.0",
         "autoprefixer": "^10.4.21",
         "consola": "^3.4.2",
-        "eslint": "^8.57.1",
+        "eslint": "^9.33.0",
         "eslint-config-prettier": "^10.1.5",
         "eslint-plugin-nuxt": "^4.0.0",
         "eslint-plugin-vitest": "^0.5.4",
