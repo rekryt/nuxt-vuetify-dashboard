@@ -19,7 +19,7 @@
         "@kevinmarrec/nuxt-pwa": "^0.17.0",
         "@nuxt/test-utils": "3.19.1",
         "@typescript-eslint/eslint-plugin": "^8.35.0",
-        "@typescript-eslint/parser": "8.35.0",
+        "@typescript-eslint/parser": "8.44.0",
         "autoprefixer": "^10.4.21",
         "consola": "^3.4.2",
         "eslint": "^8.57.1",
